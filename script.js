@@ -12,3 +12,10 @@ console.log(ord);
 
 var hour = getHour();
 console.log(hour);
+
+var numDay = getNumDay();
+console.log(numDay);
+
+$(document).ready(function () {
+  $("#date-header").prepend(day + ", " + month + " " + numDay + ord);
+});
