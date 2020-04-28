@@ -1,6 +1,11 @@
 hr {
-  border: 4px solid black;
+  border: 3px solid black;
 }
 
-h1 {
+.hr-plan {
+  border-top: 2px solid rgb(88, 88, 88);
+}
+
+.future-hours {
+  background-color: rgb(61, 230, 61);
 }

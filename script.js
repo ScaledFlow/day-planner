@@ -2,20 +2,22 @@ var month = getMonth();
 console.log(month);
 
 var day = getDay();
-console.log(day);
-
 var year = getYear();
-console.log(year);
-
 var ord = getDayOrdinal();
-console.log(ord);
-
 var hour = getHour();
-console.log(hour);
-
 var numDay = getNumDay();
-console.log(numDay);
 
 $(document).ready(function () {
   $("#date-header").prepend(day + ", " + month + " " + numDay + ord);
 });
+
+var timeOfDay = 0;
+
+for (var i = 0; i < 9; i++) {
+  timeOfDay = standardTime(i + 9);
+  $("#plan-list").append(timeOfDay + " This is a test" + "<br>");
+}
+
+// $scope.timeValue += (hours >= 12) ? " P.M." : " A.M.";
+
+console.log(standardTime(14));
