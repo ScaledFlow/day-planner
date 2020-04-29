@@ -12,7 +12,6 @@ function getMonth() {
   month[9] = "October";
   month[10] = "November";
   month[11] = "December";
-
   var d = new Date();
   var n = month[d.getMonth()];
   return n;
@@ -90,7 +89,6 @@ function standardTime(calcHour) {
   hour[21] = "9 PM";
   hour[22] = "10 PM";
   hour[23] = "11 PM";
-  // var d = new Date();
   var n = hour[calcHour];
   return n;
 }

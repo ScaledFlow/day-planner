@@ -11,13 +11,20 @@ $(document).ready(function () {
   $("#date-header").prepend(day + ", " + month + " " + numDay + ord);
 });
 
-var timeOfDay = 0;
+var x = 0;
+x = getHour();
+console.log(x);
 
-for (var i = 0; i < 9; i++) {
-  timeOfDay = standardTime(i + 9);
-  $("#plan-list").append(timeOfDay + " This is a test" + "<br>");
+for (i = 9; i < 18; i++) {
+  if (i === x) {
+    var textArea = $("#" + i).attr({
+      class: "present",
+    });
+  } else if (i > x) {
+    var textArea = $("#" + i).attr({
+      class: "future",
+    });
+  }
 }
 
-// $scope.timeValue += (hours >= 12) ? " P.M." : " A.M.";
-
-console.log(standardTime(14));
+console.log(standardTime(9));
