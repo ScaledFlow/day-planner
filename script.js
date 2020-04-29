@@ -13,10 +13,9 @@ $(document).ready(function () {
 
 var x = 0;
 x = getHour();
-console.log(x);
 
 for (i = 9; i < 18; i++) {
-  if (i === x) {
+  if (i === x + 1) {
     var textArea = $("#" + i).attr({
       class: "present",
     });
@@ -27,4 +26,20 @@ for (i = 9; i < 18; i++) {
   }
 }
 
-console.log(standardTime(9));
+function savePlan(time) {
+  console.log(timeSafe);
+}
+
+$(document).ready(function () {
+  $(".btn-choice").on("click", function () {
+    var yourPick = $(this).val();
+    console.log("Your Pick: " + yourPick);
+  });
+});
+// $(document).ready(function() {
+
+// $("#random-button").on("click", function () {
+//   console.log("clicked");
+// });
+
+// console.log(standardTime(9));
