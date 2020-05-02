@@ -1,3 +1,4 @@
+// Get current full text versio of the month of the year.
 function getMonth() {
   var month = new Array();
   month[0] = "January";
@@ -17,12 +18,14 @@ function getMonth() {
   return n;
 }
 
+// Get the current numeric day of the month.
 function getNumDay() {
   var d = new Date();
   var n = d.getDate();
   return n;
 }
 
+// Get current full text version of the day of the week.
 function getDay() {
   var month = new Array();
   month[0] = "Sunday";
@@ -37,12 +40,14 @@ function getDay() {
   return n;
 }
 
+// Get the current year.
 function getYear() {
   var d = new Date();
   var n = d.getFullYear();
   return n;
 }
 
+// Get the ordinal for the day of the month.
 function getDayOrdinal(d) {
   if (d > 3 && d < 21) return "th";
   switch (d % 10) {
@@ -57,12 +62,14 @@ function getDayOrdinal(d) {
   }
 }
 
+// Get the current hour.
 function getHour() {
   var d = new Date();
   var n = d.getHours();
   return n;
 }
 
+// Convert millitary time to standard time and add AM or PM.
 function standardTime(calcHour) {
   var hour = new Array();
   hour[0] = "12 AM";

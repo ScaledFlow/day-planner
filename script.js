@@ -6,16 +6,18 @@ var ord = getDayOrdinal();
 var hour = getHour();
 var numDay = getNumDay();
 var lastAccessDay = "";
-var currentAccessDay = "";
 var dayPlanRetrieve;
 var dayPlan = ["", "", "", "", "", "", "", "", ""];
 init();
 
-//removeLocalStorage();
-//clearDayPlan();
+// Functions removeLocalStorage(); and clearDayPlan(); are for testing code and commented out here.
+// removeLocalStorage();
+// clearDayPlan();
 
+// Initialize the site by checking if it is a new day.
+// If it is a new day, clear the dayPlan array.
+// If it is the same day as the site was last accessed, restore the dayPlan array from local storage.
 function init() {
-  // determine if the site has been accessed today
   lastAccessDay = localStorage.getItem("lastAccessed", day);
   if (lastAccessDay === null) {
     localStorage.setItem("lastAccessed", getNumDay());
@@ -29,7 +31,7 @@ function init() {
     }
   }
 
-  // color code the text areas  to differentiate past present and future
+  // Color code the text areas  to differentiate past present and future.
   var x = 0;
   x = getHour();
 
@@ -45,13 +47,13 @@ function init() {
     }
   }
 
-  // set time and date on header
+  // Set time and date on header.
   $(document).ready(function () {
     $("#date-header").prepend(day + ", " + month + " " + numDay + ord);
   });
 }
 
-// clear the day planner array if site has not been accessed since yesterday
+// Clear the day planner array if site has not been accessed since yesterday.
 function clearDayPlan() {
   // clear array
   for (i = 0; i < dayPlan.length; i++) {
@@ -61,10 +63,12 @@ function clearDayPlan() {
   getLocalStore();
 }
 
+// Stringify dayPlan array to local storage.
 function setLocalStore() {
   localStorage.setItem("dayPlan", JSON.stringify(dayPlan));
 }
 
+// Retreive stringified dayPlan array from local storage.
 function getLocalStore() {
   var dayPlanRetrieveData = localStorage.getItem("dayPlan");
   var dayPlanRetrievePlan = JSON.parse(dayPlanRetrieveData);
@@ -81,7 +85,7 @@ function populatePlan() {
   }
 }
 
-// save plan description to dayPlan array on click event.
+// Save plan description to dayPlan array on click event.
 $(document).ready(function () {
   $(".btn-choice").on("click", function () {
     var yourPick = $(this).val();
@@ -91,10 +95,10 @@ $(document).ready(function () {
   });
 });
 
-// function for testing
+// Function for testing.
 function savePlan(time) {}
 
-// function for testing
+// Function for testing
 function removeLocalStorage() {
   localStorage.removeItem("lastAccessed");
 }

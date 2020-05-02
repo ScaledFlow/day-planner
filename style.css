@@ -1,57 +1,17 @@
-/* *,
-*::after,
-*::before {
-  box-sizing: border-box;
-} */
-
-.clearfix {
-  overflow: auto;
+.container2 {
+  display: flex;
+  border: 1px solid #fff;
+  width: 800px;
 }
 
 hr {
   border: 3px solid black;
 }
 
-body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  line-height: 1;
-}
-
-textarea {
-  background: transparent;
-  border: none;
-  resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
-  width: 80%;
-  height: 40px;
-}
-
-.jumbotron {
-  text-align: center;
-  background-color: transparent;
-  color: black;
-  border-radius: 0;
-  border-bottom: 10px solid black;
-}
-
-.description {
-  white-space: pre-wrap;
-}
-
 .time-block {
-  text-align: center;
+  text-align: right;
   border-radius: 15px;
-  /* border-bottom: 2px; */
-  /* width: 0%; */
-}
-
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;
+  border-bottom: 2px;
 }
 
 .hour {
@@ -75,15 +35,28 @@ textarea {
   color: white;
 }
 
+textarea {
+  background: transparent;
+  border: none;
+  color: #000000;
+  border-left: 1px solid black;
+  width: 800px;
+  height: 40px;
+}
+
+.flexGrowx {
+  flex-grow: 4;
+}
+
 .saveBtn {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
   border: none;
-  padding: 12px 18px;
+  padding: 12px 28px;
   border-left: 1px solid black;
-  width: 5%;
+  width: 10%;
 }
 
 .saveBtn i:hover {
