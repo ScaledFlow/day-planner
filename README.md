@@ -38,8 +38,8 @@ To-do list:
 
 ## Status
 
-The project is a demo page, and no further development is planned.
+The project is a demo page, no further development is planned.
 
 ## Contact
 
-Created by [johnleintz@outlook.com](https://www.scaleflow.github.io/) - feel free to contact me!
+Created by [johnleintz@scaledflow.com](https://www.scaleflow.github.io/) - feel free to contact me!
